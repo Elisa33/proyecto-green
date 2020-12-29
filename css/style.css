@@ -1,3 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /*reset para rems. 62.5 =10px de 16px*/
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+  background-color: #fbf6f0;
+}
+
+/* Globales */
+img {
+  max-width: 100%;
+}
+
+.contain {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.8rem;
+  line-height: 4.5rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+/* Utilidades */
+.btn {
+  width: 10rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  background-color: #aee6e6;
+  color: white;
+  text-align: center;
+}
+
+.bth:hover {
+  background-color: #ffa45b;
+}
+
+/* Header */
+header {
+  background: #aee6e6;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider {
+  background: url("../img/bg-slide.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Main */
+.step {
+  border: 1px solid #ffa45b;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+
+.card {
+  min-width: 100px;
+  min-height: 150px;
+  border: 1px solid #eee;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  text-align: center;
+  color: #aee6e6;
+  padding: 4rem;
+}
+
+/* Footer */
+.footer {
+  background: #aee6e6;
+}
+
+.split {
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */
