@@ -11,8 +11,8 @@
 	border-radius: 1.5rem;
 	background-color: #fff;
 	text-align: center;
-	color: $secondary;
-	padding: 4rem;
+	color: $accent;
+	padding: 3rem;
 }
 
 *,
@@ -38,8 +38,9 @@ img {
 	max-width: 100%;
 }
 .contain {
-	max-width: 38rem;
+	max-width: 36rem;
 	//max-width: 120rem;
+	//padding: 1rem 0;
 	margin: 0 auto;
 }
 
@@ -78,12 +79,20 @@ h4 {
 /* Header */
 
 header {
-	background: $secondary;
+	background: $main;
 }
 
 .bar {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
+	padding-top: 1rem;
+	.logo {
+		width: 8rem;
+	}
+	.shop {
+		width: 3rem;
+	}
 }
 
 .slider {
@@ -102,7 +111,21 @@ header {
 }
 
 .step {
-	border: 1px solid $primary;
+	//border: 1px solid $primary;
+	background: $primary;
+	color: $accent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 5%;
+	margin: 2rem 0;
+	padding: 1rem;
+	img {
+		width: 30%;
+	}
+	h4 {
+		margin: 1rem;
+	}
 }
 
 .cards {
@@ -115,6 +138,20 @@ header {
 
 .card {
 	@include card;
+	img {
+		max-height: 200px;
+	}
+	h5 {
+		color: $secondary;
+	}
+}
+
+.add {
+	width: 3rem;
+	background: $accent;
+	color: #fff;
+	border-radius: 50%;
+	margin: 0;
 }
 
 /* Footer */
