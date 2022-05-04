@@ -9,8 +9,4 @@ Technologies:
 * sass
 
 
-## Deploy
-
-[Here](https://distracted-lovelace-0ab6e1.netlify.app/)
-
 
