@@ -12,7 +12,10 @@
 	background-color: #fff;
 	text-align: center;
 	color: $accent;
-	padding: 3rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 *,
@@ -23,13 +26,14 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 62.5%; /*reset para rems. 62.5 =10px de 16px*/
+	font-size: 1rem;
+	line-height: 0;
 }
 
 body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 1.6rem;
-	line-height: 2;
+	//line-height: 2;
 	background-color: $main;
 }
 
@@ -37,11 +41,9 @@ body {
 img {
 	max-width: 100%;
 }
-.contain {
-	max-width: 36rem;
-	//max-width: 120rem;
-	//padding: 1rem 0;
-	margin: 0 auto;
+.wrapper {
+	max-width: 1024px;
+	margin: 0 16px;
 }
 
 h1 {
@@ -58,19 +60,22 @@ h3 {
 }
 
 h4 {
-	font-size: 2.6rem;
+	font-size: 1.5rem;
 }
 
 /* Utilidades */
 
 .btn {
 	width: 10rem;
-	height: 4rem;
+	height: 3.5rem;
 	border-radius: 0.5rem;
 	margin: 1rem 0;
 	background-color: $secondary;
 	color: white;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .bth:hover {
 	background-color: $primary;
@@ -85,10 +90,10 @@ header {
 .bar {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
-	padding-top: 1rem;
+	align-items: center;
+	padding: 1rem 0;
 	.logo {
-		width: 8rem;
+		width: 5rem;
 	}
 	.shop {
 		width: 3rem;
@@ -106,8 +111,8 @@ header {
 /* Main */
 
 .steps {
-	//display: flex;
-	//justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr;
 }
 
 .step {
@@ -130,16 +135,15 @@ header {
 
 .cards {
 	display: grid;
-	// borrar receta de goncy, ver que significa
 	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
+	gap: 1rem;
 	margin: 2rem auto;
 }
 
 .card {
 	@include card;
 	img {
-		max-height: 200px;
+		height: 100px;
 	}
 	h5 {
 		color: $secondary;
@@ -147,21 +151,65 @@ header {
 }
 
 .add {
-	width: 3rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background: $accent;
 	color: #fff;
 	border-radius: 50%;
 	margin: 0;
+	cursor: pointer;
 }
 
 /* Footer */
 
 .footer {
 	background: $accent;
+
 	color: #fff;
 }
 .split {
 	text-align: center;
 	//display: grid;
 	//grid-template-columns: 2fr 1fr;
+}
+
+/* Current device (phones, 480 and down) 
+@media only screen and (max-width: 480px) {}*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 640px) {
+	.cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.steps {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem;
+		h4{
+			font-size: 1rem;
+		}
+	}
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+	.cards {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1536px and up) */
+@media only screen and (min-width: 1536px) {
+	.wrapper {
+		margin: 0 auto;
+	}
 }

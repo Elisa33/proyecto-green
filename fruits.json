@@ -1,0 +1,69 @@
+{
+    "fruits":[
+        {
+            "img":"../img/advocado.png",
+            "name":"advocado",
+            "price": 20
+        },
+        {
+            "img":"../img/apple.png",
+            "name":"apple",
+            "price": 20
+        },
+        {
+            "img":"../img/apricot.png",
+            "name":"apricot",
+            "price": 20
+        },
+        {
+            "img":"../img/banana.png",
+            "name":"banana",
+            "price": 20
+        },
+        {
+            "img":"../img/blueberries.png",
+            "name":"blueberries",
+            "price": 20
+        },
+        {
+            "img":"../img/cherries.png",
+            "name":"cherries",
+            "price": 20
+        },
+        {
+            "img":"../img/cranberries.png",
+            "name":"cranberries",
+            "price": 20
+        },
+        {
+            "img":"../img/grapes.png",
+            "name":"grapes",
+            "price": 20
+        },
+        {
+            "img":"../img/kiwi.png",
+            "name":"kiwi",
+            "price": 20
+        },
+        {
+            "img":"../img/lemon.png",
+            "name":"lemon",
+            "price": 20
+        },
+        {
+            "img":"../img/melon.png",
+            "name":"melon",
+            "price": 20
+        },
+        {
+            "img":"../img/orange.png",
+            "name":"orange",
+            "price": 20
+        },
+        {
+            "img":"../img/strawberries.png",
+            "name":"strawberries",
+            "price": 20
+        }
+    ]
+}
