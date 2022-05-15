@@ -64,6 +64,12 @@
             "img":"../img/strawberries.png",
             "name":"strawberries",
             "price": 20
+        },
+        {
+            "img":"../img/kiwi.png",
+            "name":"kiwi",
+            "price": 20
         }
+       
     ]
 }

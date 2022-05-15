@@ -2,49 +2,52 @@ window.addEventListener('load', loadData);
 
 function loadData() {
     fetch('fruits.json')
-    .then((respuesta) => respuesta.json())
-    .then((data) => {
+        .then((respuesta) => respuesta.json())
+        .then((data) => {
             console.log(data)
             showData(data);
         });
 }
 
-    function showData(data) {
-        
-        const { fruits } = data;
-        console.log(fruits)
-        const cards = document.querySelector('.cards'); 
-       
-        fruits.forEach((element, index) => {
+function showData(data) {
 
-            console.log(index)
-            console.log(element)
+    const { fruits } = data;
+    console.log(fruits)
+    const cards = document.querySelector('.cards');
 
-            const { img, name, price } = element;
+    fruits.forEach((element, index) => {
 
-            const fruta = document.createElement('div');
+        console.log(index)
+        console.log(element)
 
-            const contenido = ` 
+        const { img, name, price } = element;
+
+        const fruta = document.createElement('div');
+
+        const contenido = ` 
                             <div class="card">
                                 <img src="${img}" alt="${name}" />
-                                <h5>${name}</h5>
-                                <p>$${price}</p>
+                                <div class="flex">
+                                
+                                    <h5>${name}</h5>
+                                    <p>$${price}</p>
+                                </div>
                                 <div id="add" class="add">+</div>
                             </div>
                             `;
 
-            fruta.innerHTML = contenido;
-            cards.appendChild(fruta);
+        fruta.innerHTML = contenido;
+        cards.appendChild(fruta);
 
-          
-        })
-    }
 
-    
-      
-    
-        
-    
+    })
+}
 
-   
+
+
+
+
+
+
+
 

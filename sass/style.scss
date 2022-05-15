@@ -7,7 +7,8 @@
 @mixin card {
 	min-width: 100px;
 	min-height: 150px;
-	border: 1px solid #eee;
+	//border: 1px solid #eee;
+	box-shadow: rgba(135, 105, 23, 0.24) 0px 3px 8px;
 	border-radius: 1.5rem;
 	background-color: #fff;
 	text-align: center;
@@ -34,7 +35,15 @@ body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 1.6rem;
 	//line-height: 2;
-	background-color: $main;
+	//background-color: $main;
+}
+
+.section{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 /* Globales */
@@ -48,7 +57,7 @@ img {
 
 h1 {
 	font-size: 3.8rem;
-	line-height: 4.5rem;
+	//line-height: 4.5rem;
 }
 
 h2 {
@@ -56,7 +65,8 @@ h2 {
 }
 
 h3 {
-	font-size: 3rem;
+	font-size: 2rem;
+	color: $accent;
 }
 
 h4 {
@@ -64,13 +74,22 @@ h4 {
 }
 
 /* Utilidades */
-
+.flex{
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+}
+.bg-main{
+	background-color: $main;
+}
 .btn {
 	width: 10rem;
 	height: 3.5rem;
 	border-radius: 0.5rem;
 	margin: 1rem 0;
-	background-color: $secondary;
+	background-color: $accent;
 	color: white;
 	text-align: center;
 	display: flex;
@@ -83,9 +102,6 @@ h4 {
 
 /* Header */
 
-header {
-	background: $main;
-}
 
 .bar {
 	display: flex;
@@ -100,39 +116,94 @@ header {
 	}
 }
 
-.slider {
-	background: url('../img/bg-slide.jpg');
+.hero {
+	background: url('../img/green-hero.jpg');
 	background-position: center;
 	background-size: cover;
 	color: #fff;
+	
+	
+}
+.titles{
+	background-color: rgba(49, 40, 25, 0.314);
 	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: start;
+	justify-content: center;
 }
 
 /* Main */
 
-.steps {
+.steps, .options {
+	padding: 1rem 0;
 	display: grid;
 	grid-template-columns: 1fr;
+	gap:10px;
 }
+
 
 .step {
 	//border: 1px solid $primary;
-	background: $primary;
+
 	color: $accent;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border-radius: 5%;
-	margin: 2rem 0;
+	border-radius: 20px;
 	padding: 1rem;
 	img {
-		width: 30%;
+		width: 50%;
 	}
 	h4 {
 		margin: 1rem;
 	}
 }
+.options{
+	display: flex;
+	align-items: center;
+	div{
+		width: 25rem;
+		height: 25rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		h3{
+			color: #fff;
+		}
+	}
+}
+.option1{
+	background-image: url('../img/durazno.jpg');
+	background-position: center center;
+	background-size: cover;
+	
+}
+.option2{
+	background-image: url('../img/repollo.jpg');
+	background-position: center center;
+	background-size: cover;
+}
+.products{
+	margin: 4rem 0;
+}
 
+.fruits-section {
+	background: url('../img/fruits-section.jpg');
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	
+}
+.veggies-section {
+	background: url('../img/veggies-section.jpg');
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	
+}
 .cards {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -167,13 +238,45 @@ header {
 
 .footer {
 	background: $accent;
-
+	padding: 1rem 3rem;
 	color: #fff;
 }
-.split {
+.social {
 	text-align: center;
-	//display: grid;
-	//grid-template-columns: 2fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap:1rem;
+	padding: 1rem 0;
+}
+
+.form{
+	padding: 20px 0px;
+	
+}
+.hide{
+	display: none;
+}
+
+fieldset{
+	font-size: 1rem;
+	border: 0px;
+	input{
+		border-radius: 10px;
+		border:none;
+		padding: 5px;
+	}
+	select{
+		border: 0px;
+		background: $primary;
+	}
+}
+#contact-submit, .btn-show{
+	background-color: $accent;
+	appearance: none;
+	border:none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
 }
 
 /* Current device (phones, 480 and down) 
@@ -193,6 +296,14 @@ header {
 	.steps {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem;
+		h4{
+			font-size: 1rem;
+		}
+	}
+	.options {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: 1rem;
 		h4{
 			font-size: 1rem;
