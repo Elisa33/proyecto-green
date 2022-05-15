@@ -1,43 +1,43 @@
 {
-    "fruits":[
+    "veggies":[
         {
-            "img":"../img/advocado.png",
-            "name":"advocado",
+            "img":"../img/brocoli.png",
+            "name":"brocoli",
             "price": 20
         },
         {
-            "img":"../img/apple.png",
-            "name":"apple",
+            "img":"../img/choclo.png",
+            "name":"choclo",
             "price": 20
         },
         {
-            "img":"../img/apricot.png",
-            "name":"apricot",
+            "img":"../img/esparrago.png",
+            "name":"esparrago",
             "price": 20
         },
         {
-            "img":"../img/banana.png",
-            "name":"banana",
+            "img":"../img/mushroom.png",
+            "name":"mushroom",
             "price": 20
         },
         {
-            "img":"../img/blueberries.png",
-            "name":"blueberries",
+            "img":"../img/onion.png",
+            "name":"onion",
             "price": 20
         },
         {
-            "img":"../img/cherries.png",
-            "name":"cherries",
+            "img":"../img/tomato.png",
+            "name":"tomato",
             "price": 20
         },
         {
-            "img":"../img/cranberries.png",
-            "name":"cranberries",
+            "img":"../img/zanahoria.png",
+            "name":"zanahoria",
             "price": 20
         },
         {
-            "img":"../img/grapes.png",
-            "name":"grapes",
+            "img":"../img/zapallo.jpg",
+            "name":"zapallo",
             "price": 20
         },
         {

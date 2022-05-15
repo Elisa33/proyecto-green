@@ -39,7 +39,7 @@ body {
 }
 
 .section{
-	height: 100vh;
+	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -57,7 +57,7 @@ img {
 
 h1 {
 	font-size: 3.8rem;
-	//line-height: 4.5rem;
+	line-height: 4.5rem;
 }
 
 h2 {
@@ -65,8 +65,8 @@ h2 {
 }
 
 h3 {
-	font-size: 2rem;
-	color: $accent;
+	font-size: 4rem;
+	color: white;
 }
 
 h4 {
@@ -121,7 +121,7 @@ h4 {
 	background-position: center;
 	background-size: cover;
 	color: #fff;
-	
+	height: 100vh;
 	
 }
 .titles{
@@ -136,8 +136,8 @@ h4 {
 
 /* Main */
 
-.steps, .options {
-	padding: 1rem 0;
+.steps {
+	padding: 1rem 2rem;
 	display: grid;
 	grid-template-columns: 1fr;
 	gap:10px;
@@ -154,7 +154,7 @@ h4 {
 	border-radius: 20px;
 	padding: 1rem;
 	img {
-		width: 50%;
+		width: 20%;
 	}
 	h4 {
 		margin: 1rem;
@@ -162,6 +162,7 @@ h4 {
 }
 .options{
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	div{
 		width: 25rem;
@@ -187,7 +188,7 @@ h4 {
 	background-size: cover;
 }
 .products{
-	margin: 4rem 0;
+	//margin: 4rem 0;
 }
 
 .fruits-section {
@@ -195,6 +196,7 @@ h4 {
 	background-position: center;
 	background-size: cover;
 	color: #fff;
+	height: 100vh;
 	
 }
 .veggies-section {
@@ -202,11 +204,12 @@ h4 {
 	background-position: center;
 	background-size: cover;
 	color: #fff;
+	height: 100vh;
 	
 }
-.cards {
+.fruits-cards, .veggies-cards {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 1rem;
 	margin: 2rem auto;
 }
@@ -214,7 +217,7 @@ h4 {
 .card {
 	@include card;
 	img {
-		height: 100px;
+		height: 80px;
 	}
 	h5 {
 		color: $secondary;
@@ -250,7 +253,10 @@ h4 {
 }
 
 .form{
+	display: grid;
 	padding: 20px 0px;
+	grid-template-columns: 1fr;
+	gap:1rem;
 	
 }
 .hide{
@@ -282,9 +288,9 @@ fieldset{
 /* Current device (phones, 480 and down) 
 @media only screen and (max-width: 480px) {}*/
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 640px and up) */
 @media only screen and (min-width: 640px) {
-	.cards {
+	.fruits-cards, .veggies-cards {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 	
@@ -294,11 +300,16 @@ fieldset{
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	.steps {
-		display: grid;
+		//display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 1rem;
 		h4{
 			font-size: 1rem;
+		}
+		.step{
+			img{
+				width: 50%;
+			}
 		}
 	}
 	.options {
@@ -313,8 +324,18 @@ fieldset{
 
 /* Large devices (laptops/desktops, 1024px and up) */
 @media only screen and (min-width: 1024px) {
-	.cards {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+	.fruits-cards, .veggies-cards {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+	.form{
+		padding: 20px 0px;
+		grid-template-columns: 1fr 1fr;
+		gap:1rem;
+		
+	}
+	.section{
+
+		height: 100vh;
 	}
 }
 

@@ -1,28 +1,28 @@
 window.addEventListener('load', loadData);
 
 function loadData() {
-    fetch('fruits.json')
+    fetch('veggies.json')
         .then((respuesta) => respuesta.json())
         .then((data) => {
             console.log(data)
-            showFruits(data);
+            showData(data);
         });
 }
 
-function showFruits(data) {
+function showData(data) {
 
-    const { fruits } = data;
-    console.log(fruits)
-    const fruitCards = document.querySelector('.fruits-cards');
+    const { veggies } = data;
+    console.log(veggies)
+    const cards = document.querySelector('.veggies-cards');
 
-    fruits.forEach((element, index) => {
+    veggies.forEach((element, index) => {
 
-        console.log(index)
+        //console.log(index)
         console.log(element)
 
         const { img, name, price } = element;
 
-        const fruta = document.createElement('div');
+        const veggie = document.createElement('div');
 
         const contenido = ` 
                             <div class="card">
@@ -36,8 +36,8 @@ function showFruits(data) {
                             </div>
                             `;
 
-        fruta.innerHTML = contenido;
-        fruitCards.appendChild(fruta);
+        veggie.innerHTML = contenido;
+        cards.appendChild(veggie);
 
 
     })

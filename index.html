@@ -14,6 +14,7 @@
 					<p>Fresh products to your home</p>
 					<h1>Fresh Fruits & Vegetables</h1>
 				</div>
+				
 			</div>
 		</header>
 		<main>
@@ -44,38 +45,43 @@
 				</div>
 			</section>
 			<section class="fruits-section section">
+				<h3>Fruits</h3>
 			</section>
-			<div class="section wrapper">
-				<div class="products">
-					<div class="cards"></div>
+			<section class="section">
+				<div class="products wrapper">
+					<div class="fruits-cards"></div>
 				</div>
-			</div>
+			</section>
 			<section class="veggies-section section">
+				<h3>Vegetables</h3>
 			</section>
-			<div class="wrapper">
-				<div class="products">
-					<div class="cards"></div>
+			<section class="section">
+				<div class="products wrapper">
+					<div class="veggies-cards"></div>
 				</div>
-				<button onclick="showForm()" class="btn-show">Completar datos</button>
-			</div>
-			<div id="form" class="form wrapper hide">
-				<form id="contact" action="" method="post">
-					<h3>Realizar pedido</h3>
-					<fieldset>
-					  <input placeholder="Nombre" type="text" tabindex="1" required autofocus>
-					</fieldset>
-					<fieldset>
-					  <input placeholder="Email" type="email" tabindex="2" required>
-					</fieldset>
-					<fieldset>
-					  <input placeholder="Telefono" type="tel" tabindex="3" required>
-					</fieldset>
-					<fieldset>
-					  <input placeholder="Direecion" type="text" tabindex="3" required>
-					</fieldset>
-
-					<button onclick="showPay()" class="btn-show">Pagar pedido</button>
-					<div id="pay" class="hide">
+			</section>
+		
+		</main>
+		<footer class="footer section">
+			<div id="form" class="wrapper">
+				<form id="contact" action="" method="post" class="form">
+					<div class="datos">
+						<p>Realizar pedido</p>
+						<fieldset>
+						  <input placeholder="Nombre" type="text" tabindex="1" required autofocus>
+						</fieldset>
+						<fieldset>
+						  <input placeholder="Email" type="email" tabindex="2" required>
+						</fieldset>
+						<fieldset>
+						  <input placeholder="Telefono" type="tel" tabindex="3" required>
+						</fieldset>
+						<fieldset>
+						  <input placeholder="Direecion" type="text" tabindex="3" required>
+						</fieldset>
+						<!-- <button onclick="showPay()" class="btn-show">Pagar pedido</button> -->
+					</div>
+					<div id="pay" class="">
 						<fieldset>
 							<select id="profissao">
 							  <option selected disable value="" type="profissao">Método de pago</option>
@@ -92,9 +98,6 @@
 					
 				  </form>
 			</div>
-			
-		</main>
-		<footer class="footer section">
 			<div class="wrapper split">
 				<div class="social">
 					<img src="img/facebook.svg" alt="">
@@ -110,12 +113,13 @@
 			</div>
 		</footer>
 		<script src="js/fruits.js"></script>
+		<script src="js/veggies.js"></script>
 		<script>
-			const form = document.querySelector("#form")
+			//const form = document.querySelector("#form")
 			const pay = document.querySelector("#pay")
-			function showForm() {
+			/* function showForm() {
 				form.classList.remove("hide")
-			}
+			} */
 			function showPay() {
 				pay.classList.remove("hide")
 			}
